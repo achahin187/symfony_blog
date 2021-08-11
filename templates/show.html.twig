@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+<div class="container">
+
+<div class="row-mt-6">
+
+<div class="col-md-9 mx-auto">
+<div class="card bg-light rounded">
+<div class="card-title text-default p-4">
+             {{ post.title }}  
+</div>
+
+<div class="card-body mt-2 rounded">
+   <div class="media">
+      <img src="http://picsum.photos/100/100" class="mr-3 rounded">
+
+   <div class="media-body">
+   <h5 class="mt-0">
+             {{ post.title }}  
+   </h5>
+   {{ post.body }}
+      <a href="{{path('blog_edit',{'id':post.id})}}" class="btn btn-outline-warning btn-sm float-right mr-2">  Edit   </a>
+      <a href="{{path('blog_delete',{'id':post.id})}}" class="btn btn-outline-danger btn-sm float-right mr-2">  Delete   </a>
+
+   
+   </div>
+   
+   </div>
+<hr>
+
+</div>
+</div>
+
+</div>
+
+</div
+
+</div>
+
+{% endblock %}
